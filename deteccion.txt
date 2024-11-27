@@ -1,0 +1,19 @@
+// SI DETECTA AL ENEMIGO
+  if (deteccion()){
+    // AVANZAR Y ESPERAR
+    avanzar(255);
+    delay(100);
+    // DEFINIMOS OBSTACULO
+    if(ACTUAL == HIGH){
+      ACTUAL = LOW;
+    }else{
+      ACTUAL = HIGH;
+    }
+  } else {
+    // GIRAR DERECHA O IZQUIERDA
+    if(ACTUAL){
+    girarDerecha(200);
+    }else{
+    girarIzquierda(200);
+    }
+  }
